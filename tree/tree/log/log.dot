@@ -1,0 +1,29 @@
+digraph G
+{
+rankdir=HR
+bgcolor = "#fccccc"
+node[color = "#800000", fontsize = 15]
+edge[color = "#800000", fontsize = 20]
+subgraph cluster_tree
+{
+	node_0x603000000040 [color = blue, shape=record, label = "{POINTER: 0x603000000040 | DATA: 10 | {L_NODE: 0x603000000070 | R_NODE: 0x6030000000d0}}"];
+	node_0x603000000040 -> node_0x603000000070;
+	node_0x603000000070 [color = blue, shape=record, label = "{POINTER: 0x603000000070 | DATA: 2 | {L_NODE: 0x6030000001f0 | R_NODE: 0x6030000000a0}}"];
+	node_0x603000000070 -> node_0x6030000001f0;
+	node_0x6030000001f0 [color = blue, shape=record, label = "{POINTER: 0x6030000001f0 | DATA: 1 | {L_NODE: (nil) | R_NODE: (nil)}}"];
+	node_0x603000000070 -> node_0x6030000000a0;
+	node_0x6030000000a0 [color = blue, shape=record, label = "{POINTER: 0x6030000000a0 | DATA: 7 | {L_NODE: 0x603000000130 | R_NODE: (nil)}}"];
+	node_0x6030000000a0 -> node_0x603000000130;
+	node_0x603000000130 [color = blue, shape=record, label = "{POINTER: 0x603000000130 | DATA: 5 | {L_NODE: (nil) | R_NODE: (nil)}}"];
+	node_0x603000000040 -> node_0x6030000000d0;
+	node_0x6030000000d0 [color = blue, shape=record, label = "{POINTER: 0x6030000000d0 | DATA: 90 | {L_NODE: 0x603000000160 | R_NODE: 0x603000000100}}"];
+	node_0x6030000000d0 -> node_0x603000000160;
+	node_0x603000000160 [color = blue, shape=record, label = "{POINTER: 0x603000000160 | DATA: 89 | {L_NODE: 0x603000000190 | R_NODE: (nil)}}"];
+	node_0x603000000160 -> node_0x603000000190;
+	node_0x603000000190 [color = blue, shape=record, label = "{POINTER: 0x603000000190 | DATA: 78 | {L_NODE: (nil) | R_NODE: (nil)}}"];
+	node_0x6030000000d0 -> node_0x603000000100;
+	node_0x603000000100 [color = blue, shape=record, label = "{POINTER: 0x603000000100 | DATA: 91 | {L_NODE: (nil) | R_NODE: 0x6030000001c0}}"];
+	node_0x603000000100 -> node_0x6030000001c0;
+	node_0x6030000001c0 [color = blue, shape=record, label = "{POINTER: 0x6030000001c0 | DATA: 97 | {L_NODE: (nil) | R_NODE: (nil)}}"];
+}
+}
